@@ -21,7 +21,8 @@ BTN1:"Dood DOM Pro V1",
 BTN2:"Dood DOM pro V2",
 BTN3:"Dood S",
 step : 1,
-cache:""  
+cache:"",
+spin:"App-header"
    };
   };
  
@@ -39,6 +40,10 @@ cache:""
       })
     
     }
+
+//FIN STEP 1
+
+
     if(this.state.step === 2){
     if(btn === 1){
       this.setState({
@@ -73,12 +78,64 @@ cache:""
 
 
     }
+//FIN STEP 2
+
+
     if(this.state.step === 3){
       
+
+      if(btn === 1){
+        this.setState({
+          Question:"super ! A bientot !",
+          Messageuser:"Merci a bientot !",
+          BTN1:"",
+          BTN2:"",
+          BTN3:"",
+          spin:"lds-ring"
+        })
+      }
+  
+      if(btn === 2){
+        this.setState({
+          Question:"Ok, on vous redirige ver un tecnicien",
+          Messageuser:"Veuillez attendre un peut ...",
+          BTN1:"",
+          BTN2:"",
+          BTN3:"",
+          spin:"lds-ring"
+        })
+      }
+  
+  
+      if(btn === 3){
+        this.setState({
+          
+            Question:"Ok, on vous redirige ver un tecnicien",
+            Messageuser:"Veuillez attendre un peut ...",
+            BTN1:"",
+            BTN2:"",
+            BTN3:"",
+            spin:"lds-ring"
+         
+        })
+      }
+
+
+
     }
+
+// fin step 3
+
     if(this.state.step === 4){
       
     }
+    
+    
+    
+    
+    
+    
+    
     if(this.state.step === 5){
       
     }
@@ -137,7 +194,7 @@ cache:""
 <button onClick={this.handleClick2.bind(this)}>{this.state.BTN2}</button>
 <button onClick={this.handleClick3.bind(this)}>{this.state.BTN3}</button>
 
-     
+<center><div className="{this.staite.spin}"><div></div><div></div><div></div><div></div></div></center>
    
     </div>
      );
