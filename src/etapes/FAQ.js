@@ -26,12 +26,72 @@ cache:""
   };
  
 
+  Traitement(btn) {
+  
+
+    if(this.state.step === 1){
+      this.setState({
+        Question:"Qu'elle est le soucis ?",
+        Messageuser:"Verifier que tout est bien brancher. Que l'imprimante est correctement configurer",
+        BTN1:"Mon imprimante ne demarre pas.",
+        BTN2:"Mon imprimannte imprime pas ou mal",
+        BTN3:"Mon imprimante force sur les moteurs."
+      })
+    
+    }
+    if(this.state.step === 2){
+    if(btn === 1){
+      this.setState({
+        Question:"D'accord, essayons de voir esemble.",
+        Messageuser:"Esssayer avec un autre cable d'alimentation Si cela me fonctionne pas essayer de voir si le boutton est bien sur 'ON' deriere la machine.",
+        BTN1:"J'ai resolu mon probleme !",
+        BTN2:"Cela ne fonctionne pas.",
+        BTN3:"Sa marche mais j'ai un autre probleme."
+      })
+    }
+
+    if(btn === 2){
+      this.setState({
+        Question:"Dite nous en plus.",
+        Messageuser:"Verifier que le plateu ne soit pas trop proche de la buse. Verifier que votre machine a du finament.",
+        BTN1:"Elle imprime dans le vide.",
+        BTN2:"L'impression ce lance pas (erreur est afficher)",
+        BTN3:"Les impression son moche."
+      })
+    }
+
+
+    if(btn === 3){
+      this.setState({
+        Question:"Cela est courent dans l'impression 3D.",
+        Messageuser:"Verifier que le plateu ne soit pas trop proche de la buse. Verifier que tout les fin de course touche tout les axes",
+        BTN1:"J'ai resolu mon probleme !",
+        BTN2:"Cela ne fonctionne pas.",
+        BTN3:"Sa marche mais j'ai un autre probleme."
+      })
+    }
+
+
+    }
+    if(this.state.step === 3){
+      
+    }
+    if(this.state.step === 4){
+      
+    }
+    if(this.state.step === 5){
+      
+    }
+    }
+
+
   handleClick1() {
     let cache = this.state.step+1
     this.setState({
       step:cache,
     })
     console.log("Etape :"+cache+"/5")
+    this.Traitement(1)
   }
 
 
@@ -42,7 +102,9 @@ cache:""
     this.setState({
       step:cache,
     })
+    
     console.log("Etape :"+cache+"/5")
+    this.Traitement(2)
   }
 
 
@@ -52,34 +114,11 @@ cache:""
     this.setState({
       step:cache,
     })
+    this.Traitement(3)
     console.log("Etape :"+cache+"/5")
   }
 
 
-Traitement(){
-if(this.state.step === 2){
-  this.setState({
-    Question:"Qu'elle est le soucis ?",
-    Messageuser:"Verifier que tout est bien brancher. Que l'imprimante est correctement configurer",
-    BTN1:"Mon imprimante est BIEN brancher mais ne demarre pas.",
-    BTN2:"Mon imprimannte imprime pas ou mal",
-    BTN3:"Mon imprimante force sur les moteurs."
-  })
-
-}
-if(this.state.step === 3){
-  
-}
-if(this.state.step === 4){
-  
-}
-if(this.state.step === 5){
-  
-}
-if(this.state.step === 6){
-  
-}
-}
 
 
 
@@ -89,9 +128,9 @@ if(this.state.step === 6){
     return (
     <div className="App">
       <header>
-        {this.state.Messageuser}
+        
    <h1>{this.state.Question}</h1>
-
+{this.state.Messageuser}
       </header>
    
 <button onClick={this.handleClick1.bind(this)}>{this.state.BTN1}</button>

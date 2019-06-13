@@ -16,7 +16,7 @@ class App extends React.Component {
 titre : "Bienvenue Dans le support Dood",
 message : "j'ai besoin d'aide !",
 prossse : false,
-step:0,
+step:1,
 FAQ: <FAQ/>,
 rendre:""
     };
