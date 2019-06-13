@@ -33,6 +33,8 @@ rendre:""
     prossse: false,
     step :0,
     rendre: this.state.FAQ
+
+
     })
    
     }else{
@@ -40,7 +42,7 @@ rendre:""
         message : "j'ai besoin d'aide !",
       prossse: true,
       step:1,
-      rendre: ""
+      rendre: "" 
     })
     
     }  
