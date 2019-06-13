@@ -22,7 +22,7 @@ BTN2:"Dood DOM pro V2",
 BTN3:"Dood S",
 step : 1,
 cache:"",
-spin:"App-header"
+spin:""
    };
   };
  
@@ -91,7 +91,8 @@ spin:"App-header"
           BTN1:"",
           BTN2:"",
           BTN3:"",
-          spin:"lds-ring"
+          spin:<center><div className="lds-ring"><div></div><div></div><div></div><div></div></div></center>
+        
         })
       }
   
@@ -102,7 +103,8 @@ spin:"App-header"
           BTN1:"",
           BTN2:"",
           BTN3:"",
-          spin:"lds-ring"
+          spin:<center><div className="lds-ring"><div></div><div></div><div></div><div></div></div></center>
+               
         })
       }
   
@@ -115,7 +117,7 @@ spin:"App-header"
             BTN1:"",
             BTN2:"",
             BTN3:"",
-            spin:"lds-ring"
+            spin:<center><div className="lds-ring"><div></div><div></div><div></div><div></div></div></center>
          
         })
       }
@@ -189,12 +191,12 @@ spin:"App-header"
    <h1>{this.state.Question}</h1>
 {this.state.Messageuser}
       </header>
-   
+   {this.state.spin}
 <button onClick={this.handleClick1.bind(this)}>{this.state.BTN1}</button>
 <button onClick={this.handleClick2.bind(this)}>{this.state.BTN2}</button>
 <button onClick={this.handleClick3.bind(this)}>{this.state.BTN3}</button>
 
-<center><div className="{this.staite.spin}"><div></div><div></div><div></div><div></div></div></center>
+
    
     </div>
      );
